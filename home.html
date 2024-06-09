@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Home Page"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <img src="./static/images/logoipsum-250.svg">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Tasks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Create</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Registration">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Login</a>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+      <section class="row bg-secondary rounded border p-4 my-5" id="slideshow">
+        <h3 class="text-light">Tasks</h3>
+
+        <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active p-5 my-3">
+                    <a href="#Create" target="_blank"><img src="./image/carousel_dashboard.png" class="d-block w-100" alt="Carousel Item"></a>
+                </div>
+                <div class="carousel-item p-5 my-3">
+                    <a href="#Create" target="_blank"><img src="./image/carousel_detail.png" class="d-block w-100" alt="Carousel Item"></a>
+                </div>
+                <div class="carousel-item p-5 my-3">
+                    <a href="#Create" target="_blank"><img src="./image/create_tasks.png" class="d-block w-100" alt="Carousel Item"></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+      </section>
+
+      <section class="row bg-secondary rounded text-white p-3 my-5 g-3">
+        <h4 class="text-">Features</h4>
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col-12 col-md-4">
+                <div class="card bg-light">
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p><a href="" target="_blank"><img src="./image/detail.png" class="d-block img-fluid" alt="Feature"></a></p>
+                      </blockquote>
+                      <div class="card-footer pt-4">
+                        <p class="text-dark">Using our app, you can create tasks and set things like: due dates, status, priority, and add detailed notes. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-12 col-md-4">
+                <div class="card bg-light">
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p><a href="#" target="_blank"><img src="./image/dashboard.png" class="d-block img-fluid" alt="Feature"></a></p>
+                      </blockquote>
+                      <div class="card-footer pt-4">
+                        <p class="text-dark">In our tasks page, there is a sidebar dashboard that shows you your tasks with banners showing if the task is late or due soon. There is also a search bar to find tasks easier.</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                
+                <div class="col-12 col-md-4">
+                <div class="card bg-light">
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p><a href="#" target="_blank"><img src="./image/create_tasks.png" class="d-block img-fluid" alt="Feature"></a></p>
+                      </blockquote>
+                      <div class="card-footer pt-4">
+                        <p class="text-dark">Creating a new task is simple and easy, fill out each line and press create!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>   
+        </div>
+        <p>Version 0.2.4</p>
+      </section>
+      
+      <section>
+        <h3 id="Registration">Registration</h3>
+        <div class="dropdown-divider bg-primary my-5"></div>
+        <form onSubmit="handleSubmit" class="row g-3 bg-light p-5 border rounded border-3 shadow was-validated" novalidate>
+            <div class="form-floating col-12 col-md-6 mb-3">
+                <input type="text" class="form-control" id="first" name="first" pattern="[A-Za-z]{2,}" placeholder="john" required>
+                <label for="first name">First Name</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your first name.</div>
+              </div>
+            <div class="form-floating col-12 col-md-6 mb-3">
+                <input type="text" class="form-control" id="last" name="last" pattern="[A-Za-z]{2,}" placeholder="joe" required>
+                <label for="last name">Last Name</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter your last name</div>
+              </div>
+            <div class="form-floating col-12 col-md-6 mb-3">
+                <input type="email" class="form-control" id="email" name="email" pattern="[\w]+@[\w]+[.][a-z]{2,3}" placeholder="name@example.com" required>
+                <label for="email">Email</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+            <div class="form-floating col-12 col-md-6 mb-3">
+                <input type="tel" class="form-control" id="phone" name="phone" pattern="[\d]{3} [\d]{3} [\d]{4}" placeholder="504 877 5309" required>
+                <label for="phone">Phone Number</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a 10 digit phone number e.g 504 867 5309</div>
+              </div>
+            <div class="form-floating col-12 mb-3">
+                <textarea  class="form-control" id="username" name="username" pattern="[A-Za-z]+ [A-Za-z]+" placeholder="johndoe" required></textarea>
+                <label for="username">Username</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid username</div>
+              </div>
+            <div class="form-floating col-12 mb-3">
+                <textarea  class="form-control" id="password" name="password" pattern="[\w]" placeholder="sneakyjoe123" required></textarea>
+                <label for="password">Password</label>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter a valid username</div>
+              </div>
+              <div class="col-md-4">
+                <a href="./logged_in_home_edit.html"> <button type="button" class="btn btn-primary">Register</button></a>
+              </div>
+              <div class="col-md-4">
+                <p>already have an account? <a href="./login.html">Login here</a></p>
+              </div>
+            </form>
+      </section>
+    </main>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -126,3 +126,7 @@ body {
   border-radius: 20px;
   box-shadow: 1em 0 2em rgb(71, 61, 61);
 }
+
+.droptag {
+  transform: translateY(-2px);
+}

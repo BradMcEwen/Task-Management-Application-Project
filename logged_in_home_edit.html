@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./static/style.css">
+<title>Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./logged_in_home.html">
+                <img src="./static/images/logoipsum-250.svg">
+            </a>
+            <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNavDarkDropdown" 
+            aria-controls="navbarNavDarkDropdown" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav" id="navhover">
+                    <li class="nav-item dropdown text-end">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-fluid"src="./static/images/user.png">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Your Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Notifications</a></li>
+                            <li><a class="dropdown-item" href="#">Your Tasks</a></li>
+                            <li><a class="dropdown-item" href="#">Projects</a></li>
+                            <li><a class="dropdown-item" href="#">Create New Tasks</a></li>
+                            <li><a class="dropdown-item" href="#">Teams</a></li>
+                            <li><a class="dropdown-item" href="#">Help</a></li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                    <i class="fas fa-home me-3"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+                    <i class="fas fa-chart-area me-3"></i>
+                    <span>Tasks</span>
+                </a>
+                <hr>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="searchTask" aria-describedby="taskHelp" placeholder="Search">
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-1">
+                    <p class="mb-1 pt-1 me-3">Add New Task</p>
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#makeTask">
+                        <i class="fas fa-plus"></i>
+                    </button> 
+                </div>
+                <div class="form-check bg-primary text-white mb-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Flexbox
+                    </label>
+                </div>
+                <div class="form-check bg-info text-white">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                    Grid
+                    </label>
+                    
+                </div>
+                <div class="form-check bg-primary text-white mb-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    CSS
+                    </label>
+                </div>
+                <div class="form-check bg-info text-white">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckChecked">
+                    Bootstrap
+                    </label>
+                </div>
+                <div class="form-check bg-primary text-white mb-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    API
+                    </label>
+                </div>
+                <div class="form-check bg-info text-white">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckChecked">
+                    Database
+                    </label>
+                </div>
+                <div class="form-check bg-primary text-white mb-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    Data Information
+                    </label>
+                </div>
+                <div class="form-check bg-info text-white">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckChecked">
+                    Javascript
+                    </label>
+                </div>
+                <div class="form-check bg-primary text-white mb-1">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                    React
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+        <div class="container-fluid p-5 mt-5">
+        <div class="row justify-content-evenly row-cols-2 row-cols-xl-3 g-5">
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-warning text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    Flexbox
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/10/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-warning text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-primary text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    Grid
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/17/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-primary text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-dark text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    CSS
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/15/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-dark text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+        
+
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-warning text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    Bootstrap
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/10/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-warning text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-primary text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    API
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/17/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-primary text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-dark text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    Database
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/15/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-dark text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+            
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-warning text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    Data Information
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/10/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-warning text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-primary text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    Javascript
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/17/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-primary text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+            <div class="col p-0 taskcard">
+                <div class="w-100 bg-dark text-center text-white py-3" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                    React
+                </div>
+                <div class="card-body container shadow">
+                    <div class="row mb-3">
+                        <div class="col-4">Deadline</div>
+                        <div class="col-7 ms-auto text-center">06/15/2024</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Status</div>
+                        <div class="col-7 ms-auto bg-secondary rounded text-center">Inactive</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-3">Priority</div>
+                        <div class="col-7 ms-auto bg-success rounded text-center text-white">Medium</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Notes</div>
+                        <div class="col-7 ms-auto">notes...<br>notes...<br>notes...<br>notes...</div>
+                    </div>
+                </div>
+                <div class="w-100 bg-dark text-end text-white py-3" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                    <button type="button" class="btn btn-info">Edit</button>
+                    <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <div class="modal fade" id="makeTask" tabindex="-1" aria-labelledby="makeTaskLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="makeTaskLabel">Create New Task</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <form class="container">
+
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
+                            <label for="taskName">Name</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="taskName" placeholder="Task Name">
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
+                            <label for="deadline">Deadline</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="date" class="form-control" id="deadline" placeholder="Deadline">
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
+                            <label for="status">Status</label>
+                        </div>
+                        <div class="col-9 ms-auto btn-group dropend" id="status">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+                                Select
+                            </button>
+                            <div class="dropdown-menu p-4">
+                                <input type="radio" class="btn-check" name="status" id="inactive" value="inactive" autocomplete="off" checked>
+                                <label class="btn btn-outline-secondary w-100 mb-2" for="inactive">Inactive</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="status" id="stuck" value="stuck" autocomplete="off">
+                                <label class="btn btn-outline-danger w-100 mb-2" for="stuck">Stuck</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="status" id="working" value="working" autocomplete="off">
+                                <label class="btn btn-outline-info w-100 mb-2" for="working">Working</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="status" id="completed" value="completed" autocomplete="off">
+                                <label class="btn btn-outline-success w-100" for="completed">Completed</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
+                            <label for="priority">Priority</label>
+                        </div>
+                        <div class="col-9 ms-auto btn-group dropend" id="priority">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+                                Select
+                            </button>
+                            <div class="dropdown-menu p-4">
+                                <input type="radio" class="btn-check" name="priority" id="low" value="low" autocomplete="off" checked>
+                                <label class="btn btn-outline-info w-100 mb-2" for="inactive">Low</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="priority" id="medium" value="medium" autocomplete="off">
+                                <label class="btn btn-outline-success w-100 mb-2" for="medium">Medium</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="priority" id="high" value="high" autocomplete="off">
+                                <label class="btn btn-outline-warning w-100 mb-2" for="high">High</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="priority" id="critical" value="critical" autocomplete="off">
+                                <label class="btn btn-outline-danger w-100" for="critical">Critical</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 align-items-center">
+                        <div class="col-3">
+                            <label for="taskNotes">Notes</label>
+                        </div>
+                        <div class="col-9">
+                            <textarea class="form-control" id="taskNotes" rows="4" placeholder="Task Notes"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

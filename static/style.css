@@ -127,6 +127,21 @@ body {
   box-shadow: 1em 0 2em rgb(71, 61, 61);
 }
 
+.task-header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.task-footer {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.notebox {
+  height: 96px;
+  overflow-y: auto;
+}
+
 .droptag {
   transform: translateY(-2px);
 }

@@ -8,13 +8,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="./static/style.css">
-<title>Title</title>
+<title>Task Management</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./logged_in_home.html">
-                <img src="./static/images/logoipsum-250.svg">
+                <img src="./image/abs-task-management-high-resolution-logo-transparent (1).png" style="width: 140px; margin-left: 60px">
             </a>
             <button class="navbar-toggler" 
             type="button" 
@@ -32,14 +32,14 @@
                             <img class="img-fluid"src="./static/images/user.png">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Your Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Notifications<span class="ms-2 droptag badge rounded-pill bg-danger">99+</span></a></li>
-                            <li><a class="dropdown-item" href="#">Your Tasks</a></li>
-                            <li><a class="dropdown-item" href="#">Projects</a></li>
-                            <li><a class="dropdown-item" href="#">Create New Tasks</a></li>
-                            <li><a class="dropdown-item" href="#">Teams</a></li>
-                            <li><a class="dropdown-item" href="#">Help</a></li>
-                            <li><a class="dropdown-item" href="./home.html">Sign out</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Your Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-message"></i> Notifications<span class="ms-2 droptag badge rounded-pill bg-danger">99+</span></a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-list-check"></i> Your Tasks</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-diagram-project"></i> Projects</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-plus"></i> Create New Tasks</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-people-group"></i> Teams</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-circle-info"></i> Help</a></li>
+                            <li><a class="dropdown-item" href="./home.html"><i class="fas fa-right-from-bracket"></i> Sign out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -50,9 +50,14 @@
     </nav>
 
 
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar bg-white">
         <div class="position-sticky">
             <div class="list-group list-group-flush mx-3 mt-4">
+                <div class="mb-3 d-lg-none position-sticky">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="collapseSidebar">
+                        Hide Sidebar
+                      </button>
+                </div>
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                     <i class="fas fa-home me-3"></i>
                     <span>Home</span>
@@ -130,8 +135,14 @@
                 </div>
             </div>
         </div>
-
     </nav>
+
+    <div id="showSidebar">
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="collapseSidebar">
+        &#9654;<br>&#9654;<br>&#9654;<br>&#9654;
+    </button>
+    </div>
+
     <main>
         <div class="container-fluid p-5 mt-5">
         <div class="row justify-content-evenly row-cols-2 row-cols-xl-3 g-5">
@@ -449,7 +460,7 @@
                             </button>
                             <div class="dropdown-menu p-4">
                                 <input type="radio" class="btn-check" name="priority" id="low" value="low" autocomplete="off" checked>
-                                <label class="btn btn-outline-info w-100 mb-2" for="inactive">Low</label>
+                                <label class="btn btn-outline-info w-100 mb-2" for="low">Low</label>
                                 <br>
                                 <input type="radio" class="btn-check" name="priority" id="medium" value="medium" autocomplete="off">
                                 <label class="btn btn-outline-success w-100 mb-2" for="medium">Medium</label>
@@ -484,5 +495,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/b08e853e69.js" crossorigin="anonymous"></script>
 </body>
 </html>

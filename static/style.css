@@ -21,27 +21,22 @@ body {
     top: 0;
     bottom: 0;
     left: 0;
-    padding: 58px 0 0; /* Height of navbar */
+    padding: 84px 0 0; /* Height of navbar */
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
     width: 240px;
     background:#EAEDED;
+    z-index: 1;
 }
-
-
 
 .sidebar .active {
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
-/* .sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 48px);
-    padding-top: 0.5rem;
-    overflow-x: hidden;
-    overflow-y: auto;
-} */
+#showSidebar {
+  position: fixed;
+  top: 84px;
+}
 
 #navhover {
     margin: 0;
@@ -107,6 +102,7 @@ body {
 
   main {
     margin-left: 0px;
+    margin-top: 84px;
   }
   
   @media only screen and (min-width: 992px){

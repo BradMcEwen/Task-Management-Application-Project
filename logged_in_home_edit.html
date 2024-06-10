@@ -50,9 +50,14 @@
     </nav>
 
 
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar bg-white">
         <div class="position-sticky">
             <div class="list-group list-group-flush mx-3 mt-4">
+                <div class="mb-3 d-lg-none position-sticky">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="collapseSidebar">
+                        Hide Sidebar
+                      </button>
+                </div>
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                     <i class="fas fa-home me-3"></i>
                     <span>Home</span>
@@ -130,8 +135,14 @@
                 </div>
             </div>
         </div>
-
     </nav>
+
+    <div id="showSidebar">
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="collapseSidebar">
+        &#9654;<br>&#9654;<br>&#9654;<br>&#9654;
+    </button>
+    </div>
+
     <main>
         <div class="container-fluid p-5 mt-5">
         <div class="row justify-content-evenly row-cols-2 row-cols-xl-3 g-5">

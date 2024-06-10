@@ -426,7 +426,7 @@
                         </div>
                     </div>
 
-                    <div class="row mb-4 align-items-center">
+                    <div class="d-none d-lg-flex row mb-4 align-items-center">
                         <div class="col-3">
                             <label for="status">Status</label>
                         </div>
@@ -450,12 +450,60 @@
                         </div>
                     </div>
 
-                    <div class="row mb-4 align-items-center">
+                    <div class="d-lg-none row mb-4 align-items-center">
+                        <div class="col-3">
+                            <label for="status">Status</label>
+                        </div>
+                        <div class="col-9 ms-auto btn-group dropdown-menu-end" id="status">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                Select
+                            </button>
+                            <div class="dropdown-menu p-4">
+                                <input type="radio" class="btn-check" name="status" id="inactive" value="inactive" autocomplete="off" checked>
+                                <label class="btn btn-outline-secondary w-100 mb-2" for="inactive">Inactive</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="status" id="stuck" value="stuck" autocomplete="off">
+                                <label class="btn btn-outline-danger w-100 mb-2" for="stuck">Stuck</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="status" id="working" value="working" autocomplete="off">
+                                <label class="btn btn-outline-info w-100 mb-2" for="working">Working</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="status" id="completed" value="completed" autocomplete="off">
+                                <label class="btn btn-outline-success w-100" for="completed">Completed</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-lg-flex row mb-4 align-items-center">
                         <div class="col-3">
                             <label for="priority">Priority</label>
                         </div>
                         <div class="col-9 ms-auto btn-group dropend" id="priority">
                             <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+                                Select
+                            </button>
+                            <div class="dropdown-menu p-4">
+                                <input type="radio" class="btn-check" name="priority" id="low" value="low" autocomplete="off" checked>
+                                <label class="btn btn-outline-info w-100 mb-2" for="inactive">Low</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="priority" id="medium" value="medium" autocomplete="off">
+                                <label class="btn btn-outline-success w-100 mb-2" for="medium">Medium</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="priority" id="high" value="high" autocomplete="off">
+                                <label class="btn btn-outline-warning w-100 mb-2" for="high">High</label>
+                                <br>
+                                <input type="radio" class="btn-check" name="priority" id="critical" value="critical" autocomplete="off">
+                                <label class="btn btn-outline-danger w-100" for="critical">Critical</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-lg-none row mb-4 align-items-center">
+                        <div class="col-3">
+                            <label for="priority">Priority</label>
+                        </div>
+                        <div class="col-9 ms-auto btn-group dropdown-menu-end" id="priority">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 Select
                             </button>
                             <div class="dropdown-menu p-4">

@@ -32,30 +32,24 @@ git clone https://github.com/BradMcEwen/Task-Management-Application-Project.git
 cd Task-Management-Application-Project
 ```
 
-3. Open 'logged_in_home_edit.html' in your preferred web browser to view the webpage as a user logged into their account.
-4. Open 'home.html' in your preferred web browser to view the home page for any new visitors before anyone is registered/logged in.
+3. Open 'tasks.html' in your preferred web browser to view the webpage as a user logged into their account.
+4. Open 'index.html' in your preferred web browser to view the home page for any new visitors before anyone is registered/logged in.
 
 ## File Structure
 
-- 'home.html': Display of home page of non registered or logged in user.
+- 'index.html': Display of home page of non registered or logged in user.
     - Clicking login will send you to login page.
     - Clicking register will navigate you to the registration form.
-- 'logged_in_home_edit.html': The main page when a user is logged in or after registration.
+- 'tasks.html': The main page when a user is logged in or after registration.
 - 'static/': Contains static assets such as CSS files and images
     - 'style.css': Custom CSS file for additional styles.
     - 'images/': Folder containing images used in the webpage (e.g logo, user profile picture)
 
 ## Customization
 
-- Navbar Links: Modify the links in the navbar by editing the 'logged_in_home_edit.html' file.
+- Navbar Links: Modify the links in the navbar by editing the 'tasks.html' file.
 - Sidebar Items: Customize the sidebar items by editing the sidebar navigation section in the HTML file.
 - Task Cards: Add, edit, or remove task cards by modifying the task card sections in the HTML file.
-
-## Screenshots
-
-# Desktop View
-
-# Mobile View
 
 ## Contact
 Spencer Kim - spncrkm@gmail.com - https://www.linkedin.com/in/spencer-kim-profile

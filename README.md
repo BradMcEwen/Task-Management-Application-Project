@@ -24,12 +24,12 @@ Welcome to our Task Management System! This project showcases what we've learned
 
 1. Clone the repository to your local machine:
 ```bash
-git clone https://github.com/yourusername/task-management-system.git
+git clone https://github.com/BradMcEwen/Task-Management-Application-Project.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd task-management-system
+cd Task-Management-Application-Project
 ```
 
 3. Open 'logged_in_home_edit.html' in your preferred web browser to view the webpage as a user logged into their account.
